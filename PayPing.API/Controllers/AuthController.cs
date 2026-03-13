@@ -27,7 +27,9 @@ namespace PayPing.API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<AuthResponseDto>> Register([FromBody] RegisterDto dto)
         {
-            if (await _userManager.FindByEmailAsync(dto.Email) != null)
+            var existingUser = await _userManager.FindByEmailAsync(dto.Email);
+
+            if (existingUser != null)
                 return BadRequest("Email already in use.");
 
             var user = new AppUser

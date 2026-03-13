@@ -41,18 +41,21 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Database (PostgreSQL + Identity)
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+    ?? "Server=127.0.0.1;Port=5432;Database=PayPing_local;User Id=postgres;Password=India@123;Ssl Mode=Disable;";
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
+    options.UseNpgsql(connectionString,
         b => b.MigrationsAssembly("PayPing.Infrastructure")));
 
-builder.Services.AddIdentityCore<AppUser>(options =>
+builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
 {
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequiredLength = 6;
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
-.AddSignInManager<SignInManager<AppUser>>();
+.AddDefaultTokenProviders();
 
 // JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"] ?? throw new Exception("JWT Key missing");
@@ -96,9 +99,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowAll");
-app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

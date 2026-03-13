@@ -149,3 +149,4 @@ D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.API\obj\Debug\n
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.API\obj\Debug\net9.0\PayPing.API.pdb
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.API\obj\Debug\net9.0\PayPing.API.genruntimeconfig.cache
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.API\obj\Debug\net9.0\ref\PayPing.API.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
