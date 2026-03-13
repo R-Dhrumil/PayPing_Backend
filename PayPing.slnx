@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PayPing.API/PayPing.API.csproj" />
+  <Project Path="PayPing.Application/PayPing.Application.csproj" />
+  <Project Path="PayPing.Domain/PayPing.Domain.csproj" />
+  <Project Path="PayPing.Infrastructure/PayPing.Infrastructure.csproj" />
+</Solution>

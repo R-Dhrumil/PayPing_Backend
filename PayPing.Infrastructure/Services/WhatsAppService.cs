@@ -1,0 +1,24 @@
+using PayPing.Application.Common.Interfaces;
+
+namespace PayPing.Infrastructure.Services
+{
+    public class WhatsAppService : IWhatsAppService
+    {
+        // For local development, we can generate a WhatsApp Web URL or use a mock
+        // In production, this would use Twilio or WhatsApp Business API
+        public async Task<bool> SendReminderAsync(string phoneNumber, string message)
+        {
+            // Simple mock for now
+            Console.WriteLine($"[WhatsApp] Sending to {phoneNumber}: {message}");
+            await Task.Delay(100); 
+            return true;
+        }
+
+        public string GenerateWhatsAppLink(string phoneNumber, string message)
+        {
+            // Format: https://wa.me/number?text=urlencodedtext
+            var encodedMsg = Uri.EscapeDataString(message);
+            return $"https://wa.me/{phoneNumber}?text={encodedMsg}";
+        }
+    }
+}

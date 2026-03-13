@@ -1,0 +1,6 @@
+@PayPing.API_HostAddress = http://localhost:5234
+
+GET {{PayPing.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
