@@ -10,3 +10,15 @@ D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.Domain\obj\Debu
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.Domain\obj\Debug\net9.0\refint\PayPing.Domain.dll
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.pdb
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing_AI\backend\PayPing.Domain\obj\Debug\net9.0\ref\PayPing.Domain.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\bin\Debug\net9.0\PayPing.Domain.deps.json
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\bin\Debug\net9.0\PayPing.Domain.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\bin\Debug\net9.0\PayPing.Domain.pdb
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.csproj.AssemblyReference.cache
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.AssemblyInfoInputs.cache
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.AssemblyInfo.cs
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.csproj.CoreCompileInputs.cache
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\refint\PayPing.Domain.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.pdb
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\ref\PayPing.Domain.dll

@@ -3,6 +3,7 @@ namespace PayPing.Application.DTOs
     public class RegisterDto
     {
         public string FullName { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
     }
@@ -10,6 +11,7 @@ namespace PayPing.Application.DTOs
     public class LoginDto
     {
         public string Email { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
     }
 
@@ -17,6 +19,7 @@ namespace PayPing.Application.DTOs
     {
         public string Token { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
+        public string PhoneNumber { get; set; } = string.Empty;
         public string FullName { get; set; } = string.Empty;
     }
 }

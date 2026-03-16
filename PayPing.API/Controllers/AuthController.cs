@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PayPing.Application.Common.Interfaces;
 using PayPing.Application.DTOs;
 using PayPing.Domain.Entities;
@@ -27,16 +28,17 @@ namespace PayPing.API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<AuthResponseDto>> Register([FromBody] RegisterDto dto)
         {
-            var existingUser = await _userManager.FindByEmailAsync(dto.Email);
+            var existingUser = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == dto.PhoneNumber);
 
             if (existingUser != null)
-                return BadRequest("Email already in use.");
+                return BadRequest("Number already in use.");
 
             var user = new AppUser
             {
-                UserName = dto.Email,
+                UserName = dto.PhoneNumber,
                 Email = dto.Email,
                 FullName = dto.FullName,
+                PhoneNumber = dto.PhoneNumber
             };
 
             var result = await _userManager.CreateAsync(user, dto.Password);
@@ -46,16 +48,17 @@ namespace PayPing.API.Controllers
 
             return Ok(new AuthResponseDto
             {
-                Token = _tokenService.CreateToken(user.Id, user.Email!, user.FullName),
+                Token = _tokenService.CreateToken(user.Id, user.Email!, user.FullName, user.PhoneNumber),
                 Email = user.Email!,
                 FullName = user.FullName,
+                PhoneNumber = user.PhoneNumber
             });
         }
 
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponseDto>> Login([FromBody] LoginDto dto)
         {
-            var user = await _userManager.FindByEmailAsync(dto.Email);
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == dto.PhoneNumber);
             if (user == null) return Unauthorized("Invalid credentials.");
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, dto.Password, false);
@@ -63,9 +66,10 @@ namespace PayPing.API.Controllers
 
             return Ok(new AuthResponseDto
             {
-                Token = _tokenService.CreateToken(user.Id, user.Email!, user.FullName),
+                Token = _tokenService.CreateToken(user.Id, user.Email!, user.FullName, user.PhoneNumber),
                 Email = user.Email!,
                 FullName = user.FullName,
+                PhoneNumber = user.PhoneNumber
             });
         }
     }

@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PayPing.API"
+    "\\PayPing.API",
+    "\\PayPing.API\\Controllers",
+    "\\PayPing.Application",
+    "\\PayPing.Application\\DTOs"
   ],
-  "SelectedNode": "\\PayPing.API\\appsettings.json",
+  "SelectedNode": "\\PayPing.slnx",
   "PreviewInSolutionExplorer": false
 }

@@ -798,11 +798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
+      "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
       "projectName": "PayPing.Domain",
-      "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
+      "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
       "packagesPath": "C:\\Users\\Dhrumil\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\obj\\",
+      "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

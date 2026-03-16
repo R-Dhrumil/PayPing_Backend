@@ -16,7 +16,7 @@ namespace PayPing.Infrastructure.Services
             _config = config;
         }
 
-        public string CreateToken(string userId, string email, string fullName)
+        public string CreateToken(string userId, string email, string fullName, string phonenumber)
         {
             var jwtKey = _config["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key not configured");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
@@ -27,6 +27,7 @@ namespace PayPing.Infrastructure.Services
                 new Claim(ClaimTypes.NameIdentifier, userId),
                 new Claim(ClaimTypes.Email, email),
                 new Claim(ClaimTypes.Name, fullName),
+                new Claim(ClaimTypes.SerialNumber, phonenumber )
             };
 
             var token = new JwtSecurityToken(

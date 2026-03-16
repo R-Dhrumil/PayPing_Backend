@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Application\\PayPing.Application.csproj": {}
+    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Application\\PayPing.Application.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Application\\PayPing.Application.csproj": {
+    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Application\\PayPing.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Application\\PayPing.Application.csproj",
+        "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Application\\PayPing.Application.csproj",
         "projectName": "PayPing.Application",
-        "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Application\\PayPing.Application.csproj",
+        "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Application\\PayPing.Application.csproj",
         "packagesPath": "C:\\Users\\Dhrumil\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Application\\obj\\",
+        "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj": {
-                "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj"
+              "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj": {
+                "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj": {
+    "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
+        "projectUniqueName": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
         "projectName": "PayPing.Domain",
-        "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
+        "projectPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\PayPing.Domain.csproj",
         "packagesPath": "C:\\Users\\Dhrumil\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing_AI\\backend\\PayPing.Domain\\obj\\",
+        "outputPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
