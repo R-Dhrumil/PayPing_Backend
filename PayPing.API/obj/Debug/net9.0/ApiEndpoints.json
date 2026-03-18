@@ -218,6 +218,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PayPing.API.Controllers.RemindersController",
+    "Method": "SendNow",
+    "RelativePath": "api/Reminders/{id}/send-now",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PayPing.API.Controllers.TestController",
     "Method": "Get",
     "RelativePath": "api/Test",

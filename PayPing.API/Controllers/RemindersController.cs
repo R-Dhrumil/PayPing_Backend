@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PayPing.Domain.Entities;
 using PayPing.Infrastructure.Persistence;
+using PayPing.Application.Common.Interfaces;
+using PayPing.Application.DTOs;
 
 namespace PayPing.API.Controllers
 {
@@ -17,13 +19,28 @@ namespace PayPing.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Reminder>>> GetReminders()
+        public async Task<ActionResult<IEnumerable<ReminderDto>>> GetReminders()
         {
-            return await _context.Reminders.ToListAsync();
+            var reminders = await _context.Reminders.ToListAsync();
+            return Ok(reminders.Select(r => new ReminderDto
+            {
+                Id = r.Id,
+                Name = r.Name,
+                Amount = r.Amount,
+                PhoneNumber = r.PhoneNumber,
+                Message = r.Message,
+                Frequency = r.Frequency,
+                NextReminderDate = r.NextReminderDate,
+                EndDate = r.EndDate,
+                AvatarUrl = r.AvatarUrl,
+                IsPaid = r.IsPaid,
+                CreatedAt = r.CreatedAt,
+                UserId = r.UserId
+            }));
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Reminder>> GetReminder(Guid id)
+        public async Task<ActionResult<ReminderDto>> GetReminder(Guid id)
         {
             var reminder = await _context.Reminders.FindAsync(id);
 
@@ -32,17 +49,78 @@ namespace PayPing.API.Controllers
                 return NotFound();
             }
 
-            return reminder;
+            return Ok(new ReminderDto
+            {
+                Id = reminder.Id,
+                Name = reminder.Name,
+                Amount = reminder.Amount,
+                PhoneNumber = reminder.PhoneNumber,
+                Message = reminder.Message,
+                Frequency = reminder.Frequency,
+                NextReminderDate = reminder.NextReminderDate,
+                EndDate = reminder.EndDate,
+                AvatarUrl = reminder.AvatarUrl,
+                IsPaid = reminder.IsPaid,
+                CreatedAt = reminder.CreatedAt,
+                UserId = reminder.UserId
+            });
         }
 
         [HttpPost]
-        public async Task<ActionResult<Reminder>> PostReminder(Reminder reminder)
+        public async Task<ActionResult<ReminderDto>> PostReminder(CreateReminderDto createDto)
         {
-            reminder.Id = Guid.NewGuid();
+            var reminder = new Reminder
+            {
+                Id = Guid.NewGuid(),
+                Name = createDto.Name,
+                Amount = createDto.Amount,
+                PhoneNumber = createDto.PhoneNumber,
+                Message = createDto.Message,
+                Frequency = createDto.Frequency,
+                NextReminderDate = createDto.NextReminderDate,
+                EndDate = createDto.EndDate,
+                AvatarUrl = createDto.AvatarUrl,
+                UserId = createDto.UserId,
+                CreatedAt = DateTime.UtcNow,
+                IsPaid = false
+            };
+
             _context.Reminders.Add(reminder);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetReminder), new { id = reminder.Id }, reminder);
+            var responseDto = new ReminderDto
+            {
+                Id = reminder.Id,
+                Name = reminder.Name,
+                Amount = reminder.Amount,
+                PhoneNumber = reminder.PhoneNumber,
+                Message = reminder.Message,
+                Frequency = reminder.Frequency,
+                NextReminderDate = reminder.NextReminderDate,
+                EndDate = reminder.EndDate,
+                AvatarUrl = reminder.AvatarUrl,
+                IsPaid = reminder.IsPaid,
+                CreatedAt = reminder.CreatedAt,
+                UserId = reminder.UserId
+            };
+
+            return CreatedAtAction(nameof(GetReminder), new { id = reminder.Id }, responseDto);
+        }
+
+        [HttpPost("{id}/send-now")]
+        public async Task<IActionResult> SendNow(Guid id, [FromServices] IWhatsAppService whatsAppService)
+        {
+            var reminder = await _context.Reminders.FindAsync(id);
+            if (reminder == null) return NotFound();
+
+            var result = await whatsAppService.SendReminderAsync(reminder.PhoneNumber, reminder.Message);
+
+            if (result)
+            {
+                return Ok(new { Success = true, Message = "WhatsApp reminder sent manually." });
+            }
+
+            return StatusCode(500, "Failed to send WhatsApp reminder.");
         }
 
         [HttpPatch("{id}/mark-paid")]

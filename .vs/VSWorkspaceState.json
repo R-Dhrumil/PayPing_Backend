@@ -3,9 +3,9 @@
     "",
     "\\PayPing.API",
     "\\PayPing.API\\Controllers",
-    "\\PayPing.Application",
-    "\\PayPing.Application\\DTOs"
+    "\\PayPing.Infrastructure",
+    "\\PayPing.Infrastructure\\Services"
   ],
-  "SelectedNode": "\\PayPing.slnx",
+  "SelectedNode": "\\PayPing.API\\Controllers\\RemindersController.cs",
   "PreviewInSolutionExplorer": false
 }

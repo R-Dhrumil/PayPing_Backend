@@ -88,6 +88,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IWhatsAppService, WhatsAppService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
+// Background Services
+builder.Services.AddHostedService<ReminderBackgroundService>();
+
 var app = builder.Build();
 
 

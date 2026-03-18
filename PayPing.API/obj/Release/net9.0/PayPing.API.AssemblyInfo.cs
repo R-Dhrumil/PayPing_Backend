@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PayPing.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4b4de157a8e6489a5bef1d5bc7cf44ee06cdbee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09924a9f909769074397727444d5a3933414bff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PayPing.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PayPing.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
