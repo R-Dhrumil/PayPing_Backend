@@ -4,9 +4,12 @@ using PayPing.Domain.Entities;
 using PayPing.Infrastructure.Persistence;
 using PayPing.Application.Common.Interfaces;
 using PayPing.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace PayPing.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class RemindersController : ControllerBase
@@ -18,10 +21,16 @@ namespace PayPing.API.Controllers
             _context = context;
         }
 
+        private string GetCurrentUserId() => User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ReminderDto>>> GetReminders()
         {
-            var reminders = await _context.Reminders.ToListAsync();
+            var userId = GetCurrentUserId();
+            var reminders = await _context.Reminders
+                .Where(r => r.UserId == userId)
+                .ToListAsync();
+
             return Ok(reminders.Select(r => new ReminderDto
             {
                 Id = r.Id,
@@ -42,7 +51,9 @@ namespace PayPing.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ReminderDto>> GetReminder(Guid id)
         {
-            var reminder = await _context.Reminders.FindAsync(id);
+            var userId = GetCurrentUserId();
+            var reminder = await _context.Reminders
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == userId);
 
             if (reminder == null)
             {
@@ -69,6 +80,8 @@ namespace PayPing.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ReminderDto>> PostReminder(CreateReminderDto createDto)
         {
+            var userId = GetCurrentUserId();
+            
             var reminder = new Reminder
             {
                 Id = Guid.NewGuid(),
@@ -80,7 +93,7 @@ namespace PayPing.API.Controllers
                 NextReminderDate = createDto.NextReminderDate,
                 EndDate = createDto.EndDate,
                 AvatarUrl = createDto.AvatarUrl,
-                UserId = createDto.UserId,
+                UserId = userId, // Always use the authenticated user's ID
                 CreatedAt = DateTime.UtcNow,
                 IsPaid = false
             };
@@ -110,7 +123,10 @@ namespace PayPing.API.Controllers
         [HttpPost("{id}/send-now")]
         public async Task<IActionResult> SendNow(Guid id, [FromServices] IWhatsAppService whatsAppService)
         {
-            var reminder = await _context.Reminders.FindAsync(id);
+            var userId = GetCurrentUserId();
+            var reminder = await _context.Reminders
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == userId);
+            
             if (reminder == null) return NotFound();
 
             var result = await whatsAppService.SendReminderAsync(reminder.PhoneNumber, reminder.Message);
@@ -126,7 +142,10 @@ namespace PayPing.API.Controllers
         [HttpPatch("{id}/mark-paid")]
         public async Task<IActionResult> MarkAsPaid(Guid id)
         {
-            var reminder = await _context.Reminders.FindAsync(id);
+            var userId = GetCurrentUserId();
+            var reminder = await _context.Reminders
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == userId);
+            
             if (reminder == null) return NotFound();
 
             reminder.IsPaid = true;
@@ -150,7 +169,10 @@ namespace PayPing.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteReminder(Guid id)
         {
-            var reminder = await _context.Reminders.FindAsync(id);
+            var userId = GetCurrentUserId();
+            var reminder = await _context.Reminders
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == userId);
+            
             if (reminder == null)
             {
                 return NotFound();

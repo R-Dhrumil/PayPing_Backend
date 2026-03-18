@@ -123,7 +123,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[PayPing.Domain.Entities.Reminder, PayPing.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PayPing.Application.DTOs.ReminderDto, PayPing.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -142,14 +142,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "reminder",
-        "Type": "PayPing.Domain.Entities.Reminder",
+        "Name": "createDto",
+        "Type": "PayPing.Application.DTOs.CreateReminderDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "PayPing.Domain.Entities.Reminder",
+        "Type": "PayPing.Application.DTOs.ReminderDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -175,7 +175,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "PayPing.Domain.Entities.Reminder",
+        "Type": "PayPing.Application.DTOs.ReminderDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

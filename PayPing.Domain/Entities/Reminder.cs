@@ -16,6 +16,7 @@ namespace PayPing.Domain.Entities
         public string? AvatarUrl { get; set; }
         public bool IsPaid { get; set; } = false;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public Guid UserId { get; set; } // Foreign key to User later
+        public string UserId { get; set; } = string.Empty;
+        public virtual AppUser User { get; set; } = null!;
     }
 }

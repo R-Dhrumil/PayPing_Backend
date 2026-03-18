@@ -267,12 +267,19 @@ namespace PayPing.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Frequency")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsPaid")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -282,10 +289,19 @@ namespace PayPing.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("NextReminderDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("IsPaid", "NextReminderDate");
 
                     b.ToTable("Reminders");
                 });
@@ -350,6 +366,17 @@ namespace PayPing.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Reminder");
+                });
+
+            modelBuilder.Entity("PayPing.Domain.Entities.Reminder", b =>
+                {
+                    b.HasOne("PayPing.Domain.Entities.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

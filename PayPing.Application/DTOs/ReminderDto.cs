@@ -15,7 +15,7 @@ namespace PayPing.Application.DTOs
         public string? AvatarUrl { get; set; }
         public bool IsPaid { get; set; }
         public DateTime CreatedAt { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; } = string.Empty;
     }
 
     public class CreateReminderDto
@@ -28,6 +28,6 @@ namespace PayPing.Application.DTOs
         public DateTime NextReminderDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string? AvatarUrl { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; } = string.Empty;
     }
 }

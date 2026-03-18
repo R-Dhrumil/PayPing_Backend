@@ -55,8 +55,7 @@
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T08:30:36.061Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -66,7 +65,7 @@
               "RelativeDocumentMoniker": "PayPing.API\\Program.cs",
               "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.API\\Program.cs",
               "RelativeToolTip": "PayPing.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAOB/wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T09:48:53.277Z",
               "EditorCaption": ""
@@ -81,8 +80,7 @@
               "RelativeToolTip": "PayPing.API\\Controllers\\RemindersController.cs",
               "ViewState": "AgIAAKUAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T09:17:28.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T09:17:28.037Z"
             },
             {
               "$type": "Document",
@@ -94,8 +92,7 @@
               "RelativeToolTip": "PayPing.Infrastructure\\Services\\TokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:50:04.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-16T08:50:04.425Z"
             },
             {
               "$type": "Document",
@@ -143,8 +140,7 @@
               "RelativeToolTip": "PayPing.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-13T05:26:27.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-13T05:26:27.628Z"
             }
           ]
         }

@@ -23,6 +23,16 @@ namespace PayPing.Infrastructure.Persistence
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Amount).HasPrecision(18, 2);
+
+                // Foreign Key to AppUser
+                entity.HasOne(e => e.User)
+                    .WithMany()
+                    .HasForeignKey(e => e.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                // Indexes
+                entity.HasIndex(e => e.UserId);
+                entity.HasIndex(e => new { e.IsPaid, e.NextReminderDate });
             });
 
             modelBuilder.Entity<PaymentHistory>(entity =>

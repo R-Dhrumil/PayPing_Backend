@@ -10,7 +10,7 @@ namespace PayPing.Infrastructure.Persistence
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             // Use a dummy connection string for migration creation if the real one isn't available or causing issues
-            optionsBuilder.UseNpgsql("Host=localhost;Database=payping_db;Username=postgres;Password=postgres", 
+            optionsBuilder.UseNpgsql("Host=localhost;Database=PayPing_local;Username=postgres;Password=India@123", 
                 o => o.MigrationsAssembly("PayPing.Infrastructure")
                       .SetPostgresVersion(new Version(15, 0)));
 

@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using PayPing.Application.Common.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PayPing.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class MessagingController : ControllerBase
