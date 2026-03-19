@@ -3,7 +3,6 @@
     "",
     "\\PayPing.API",
     "\\PayPing.Application",
-    "\\PayPing.Application\\Common\\Interfaces",
     "\\PayPing.Application\\DTOs",
     "\\PayPing.Domain",
     "\\PayPing.Domain\\Entities",

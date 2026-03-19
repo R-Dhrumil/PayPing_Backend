@@ -80,44 +80,60 @@ namespace PayPing.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ReminderDto>> PostReminder(CreateReminderDto createDto)
         {
-            var userId = GetCurrentUserId();
-            
-            var reminder = new Reminder
+            try
             {
-                Id = Guid.NewGuid(),
-                Name = createDto.Name,
-                Amount = createDto.Amount,
-                PhoneNumber = createDto.PhoneNumber,
-                Message = createDto.Message,
-                Frequency = createDto.Frequency,
-                NextReminderDate = createDto.NextReminderDate,
-                EndDate = createDto.EndDate,
-                AvatarUrl = createDto.AvatarUrl,
-                UserId = userId, // Always use the authenticated user's ID
-                CreatedAt = DateTime.UtcNow,
-                IsPaid = false
-            };
+                var userId = GetCurrentUserId();
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return Unauthorized(new { Message = "User ID not found in token." });
+                }
+                
+                var reminder = new Reminder
+                {
+                    Id = Guid.NewGuid(),
+                    Name = createDto.Name,
+                    Amount = createDto.Amount,
+                    PhoneNumber = createDto.PhoneNumber,
+                    Message = createDto.Message,
+                    Frequency = createDto.Frequency,
+                    NextReminderDate = createDto.NextReminderDate,
+                    EndDate = createDto.EndDate,
+                    AvatarUrl = createDto.AvatarUrl,
+                    UserId = userId,
+                    CreatedAt = DateTime.UtcNow,
+                    IsPaid = false
+                };
 
-            _context.Reminders.Add(reminder);
-            await _context.SaveChangesAsync();
+                _context.Reminders.Add(reminder);
+                await _context.SaveChangesAsync();
 
-            var responseDto = new ReminderDto
+                var responseDto = new ReminderDto
+                {
+                    Id = reminder.Id,
+                    Name = reminder.Name,
+                    Amount = reminder.Amount,
+                    PhoneNumber = reminder.PhoneNumber,
+                    Message = reminder.Message,
+                    Frequency = reminder.Frequency,
+                    NextReminderDate = reminder.NextReminderDate,
+                    EndDate = reminder.EndDate,
+                    AvatarUrl = reminder.AvatarUrl,
+                    IsPaid = reminder.IsPaid,
+                    CreatedAt = reminder.CreatedAt,
+                    UserId = reminder.UserId
+                };
+
+                return CreatedAtAction(nameof(GetReminder), new { id = reminder.Id }, responseDto);
+            }
+            catch (DbUpdateException ex)
             {
-                Id = reminder.Id,
-                Name = reminder.Name,
-                Amount = reminder.Amount,
-                PhoneNumber = reminder.PhoneNumber,
-                Message = reminder.Message,
-                Frequency = reminder.Frequency,
-                NextReminderDate = reminder.NextReminderDate,
-                EndDate = reminder.EndDate,
-                AvatarUrl = reminder.AvatarUrl,
-                IsPaid = reminder.IsPaid,
-                CreatedAt = reminder.CreatedAt,
-                UserId = reminder.UserId
-            };
-
-            return CreatedAtAction(nameof(GetReminder), new { id = reminder.Id }, responseDto);
+                var innerMessage = ex.InnerException?.Message ?? ex.Message;
+                return StatusCode(500, new { Message = "Database update failed.", Details = innerMessage });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "An unexpected error occurred.", Details = ex.Message });
+            }
         }
 
         [HttpPost("{id}/send-now")]

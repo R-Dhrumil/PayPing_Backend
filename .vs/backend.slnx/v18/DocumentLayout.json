@@ -59,8 +59,7 @@
               "RelativeToolTip": "PayPing.API\\Program.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAEwDQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T05:42:16.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T05:42:16.751Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "PayPing.Domain\\Entities\\Reminder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T05:37:25.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T05:37:25.41Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "PayPing.Domain\\Entities\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T05:37:16.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T05:37:16.824Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "PayPing.Application\\DTOs\\ReminderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T05:37:04.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T05:37:04.595Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "PayPing.Application\\DTOs\\AuthDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T05:36:51.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T05:36:51.11Z"
             }
           ]
         }

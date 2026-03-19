@@ -28,6 +28,7 @@ namespace PayPing.Application.DTOs
         public DateTime NextReminderDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string? AvatarUrl { get; set; }
-        public string UserId { get; set; } = string.Empty;
+        public string? UserId { get; set; } = string.Empty;
+
     }
 }
