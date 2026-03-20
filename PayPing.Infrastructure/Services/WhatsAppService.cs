@@ -1,3 +1,4 @@
+
 using PayPing.Application.Common.Interfaces;
 
 namespace PayPing.Infrastructure.Services
@@ -9,9 +10,12 @@ namespace PayPing.Infrastructure.Services
         public async Task<bool> SendReminderAsync(string phoneNumber, string message)
         {
             // Simple mock for now
+            var link = GenerateWhatsAppLink(phoneNumber, message);
             Console.WriteLine($"[WhatsApp] Sending to {phoneNumber}: {message}");
+            Console.WriteLine(link);
             await Task.Delay(100); 
             return true;
+            
         }
 
         public string GenerateWhatsAppLink(string phoneNumber, string message)

@@ -27,7 +27,7 @@ namespace PayPing.API.Controllers
             var userId = GetCurrentUserId();
             return await _context.PaymentHistories
                 .Include(h => h.Reminder)
-                .Where(h => h.Reminder.UserId == userId)
+                .Where(h => h.Reminder.UserId == userId)    
                 .OrderByDescending(h => h.PaymentDate)
                 .ToListAsync();
         }

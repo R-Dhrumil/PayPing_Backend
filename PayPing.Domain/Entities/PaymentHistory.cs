@@ -9,6 +9,7 @@ namespace PayPing.Domain.Entities
         public Reminder? Reminder { get; set; }
         public decimal AmountPaid { get; set; }
         public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
+        public bool IsPaid { get; set; }
         public string? Notes { get; set; }
     }
 }

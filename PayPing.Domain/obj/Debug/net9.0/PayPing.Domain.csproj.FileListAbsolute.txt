@@ -22,3 +22,4 @@ D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\n
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\refint\PayPing.Domain.dll
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.pdb
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\ref\PayPing.Domain.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Domain\obj\Debug\net9.0\PayPing.Domain.sourcelink.json

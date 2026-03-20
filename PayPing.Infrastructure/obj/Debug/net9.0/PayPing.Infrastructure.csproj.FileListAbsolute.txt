@@ -36,3 +36,4 @@ D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Infrastructure\obj
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Infrastructure\obj\Debug\net9.0\PayPing.Infrastructure.pdb
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Infrastructure\obj\Debug\net9.0\PayPing.Infrastructure.genruntimeconfig.cache
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Infrastructure\obj\Debug\net9.0\ref\PayPing.Infrastructure.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.Infrastructure\obj\Debug\net9.0\PayPing.Infrastructure.sourcelink.json

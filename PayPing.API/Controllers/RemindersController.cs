@@ -173,6 +173,7 @@ namespace PayPing.API.Controllers
                 ReminderId = reminder.Id,
                 AmountPaid = reminder.Amount,
                 PaymentDate = DateTime.UtcNow,
+                IsPaid = reminder.IsPaid,
                 Notes = "Marked as paid from dashboard"
             };
             

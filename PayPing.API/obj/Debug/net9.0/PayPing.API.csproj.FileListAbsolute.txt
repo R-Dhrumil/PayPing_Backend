@@ -305,4 +305,5 @@ D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\bin\Debug\net9
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\obj\Debug\net9.0\PayPing.API.sourcelink.json
 D:\Dev\Internship\Xhire_Tech\Projects\PayPing\backend\PayPing.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

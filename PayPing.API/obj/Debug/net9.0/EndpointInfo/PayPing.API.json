@@ -625,6 +625,9 @@
             "type": "string",
             "format": "date-time"
           },
+          "isPaid": {
+            "type": "boolean"
+          },
           "notes": {
             "type": "string",
             "nullable": true
