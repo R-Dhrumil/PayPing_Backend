@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.infrastructure\\services\\reminderbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|solutionrelative:payping.infrastructure\\services\\reminderbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.api\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|solutionrelative:payping.api\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.infrastructure\\services\\whatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|solutionrelative:payping.infrastructure\\services\\whatsappservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|solutionrelative:payping.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.api\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43867513-26D2-B451-D8A3-85676F7C45E4}|PayPing.API\\PayPing.API.csproj|solutionrelative:payping.api\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFAB9EBB-99D8-BC3F-E497-3F4D438A5F64}|PayPing.Domain\\PayPing.Domain.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.domain\\entities\\paymenthistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,10 +50,6 @@
       "RelativeMoniker": "D:0:0:{AFAB9EBB-99D8-BC3F-E497-3F4D438A5F64}|PayPing.Domain\\PayPing.Domain.csproj|solutionrelative:payping.domain\\entities\\reminder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.infrastructure\\services\\reminderbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62C6B89D-DC77-83BC-D14C-AFE397FCE572}|PayPing.Infrastructure\\PayPing.Infrastructure.csproj|solutionrelative:payping.infrastructure\\services\\reminderbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{96D786F2-2464-13A6-D181-288C4F1A4AAC}|PayPing.Application\\PayPing.Application.csproj|d:\\dev\\internship\\xhire_tech\\projects\\payping\\backend\\payping.application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96D786F2-2464-13A6-D181-288C4F1A4AAC}|PayPing.Application\\PayPing.Application.csproj|solutionrelative:payping.application\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -68,20 +68,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20260320070519_AddIsPaidColumn.cs",
-              "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
-              "RelativeDocumentMoniker": "PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
-              "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
-              "RelativeToolTip": "PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T07:13:45.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.API\\appsettings.json",
               "RelativeDocumentMoniker": "PayPing.API\\appsettings.json",
@@ -89,38 +76,60 @@
               "RelativeToolTip": "PayPing.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-20T07:12:59.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T07:12:59.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "HistoryController.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.API\\Controllers\\HistoryController.cs",
               "RelativeDocumentMoniker": "PayPing.API\\Controllers\\HistoryController.cs",
               "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.API\\Controllers\\HistoryController.cs",
               "RelativeToolTip": "PayPing.API\\Controllers\\HistoryController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA4wBsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwB4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T06:19:13.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T06:19:13.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "WhatsAppService.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\WhatsAppService.cs",
               "RelativeDocumentMoniker": "PayPing.Infrastructure\\Services\\WhatsAppService.cs",
               "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\WhatsAppService.cs",
               "RelativeToolTip": "PayPing.Infrastructure\\Services\\WhatsAppService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T05:18:35.53Z",
+              "WhenOpened": "2026-03-20T05:18:35.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReminderBackgroundService.cs",
+              "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
+              "RelativeDocumentMoniker": "PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
+              "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
+              "RelativeToolTip": "PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T09:05:36.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "20260320070519_AddIsPaidColumn.cs",
+              "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
+              "RelativeDocumentMoniker": "PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
+              "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
+              "RelativeToolTip": "PayPing.Infrastructure\\Persistence\\Migrations\\20260320070519_AddIsPaidColumn.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T07:13:45.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContextFactory.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\ApplicationDbContextFactory.cs",
               "RelativeDocumentMoniker": "PayPing.Infrastructure\\Persistence\\ApplicationDbContextFactory.cs",
@@ -128,12 +137,11 @@
               "RelativeToolTip": "PayPing.Infrastructure\\Persistence\\ApplicationDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:03:55.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:03:55.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "PayPing.Infrastructure\\Persistence\\ApplicationDbContext.cs",
@@ -141,12 +149,11 @@
               "RelativeToolTip": "PayPing.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:03:33.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:03:33.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PaymentHistory.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\Entities\\PaymentHistory.cs",
               "RelativeDocumentMoniker": "PayPing.Domain\\Entities\\PaymentHistory.cs",
@@ -154,23 +161,21 @@
               "RelativeToolTip": "PayPing.Domain\\Entities\\PaymentHistory.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAQwAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T06:12:57.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T06:12:57.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "HistoryController.cs",
               "DocumentMoniker": "C:\\Users\\Dhrumil\\AppData\\Local\\SourceServer\\eb9f3bf384589c5c47447a6c4fab38f8f51d72d8141f482696c286ecf46dcfb5\\PayPing.API\\Controllers\\HistoryController.cs",
               "ToolTip": "C:\\Users\\Dhrumil\\AppData\\Local\\SourceServer\\eb9f3bf384589c5c47447a6c4fab38f8f51d72d8141f482696c286ecf46dcfb5\\PayPing.API\\Controllers\\HistoryController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAiwBsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T06:23:17.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T06:23:17.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20260318054005_AddUserFKAndIndexes.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Persistence\\Migrations\\20260318054005_AddUserFKAndIndexes.cs",
               "RelativeDocumentMoniker": "PayPing.Infrastructure\\Persistence\\Migrations\\20260318054005_AddUserFKAndIndexes.cs",
@@ -178,12 +183,11 @@
               "RelativeToolTip": "PayPing.Infrastructure\\Persistence\\Migrations\\20260318054005_AddUserFKAndIndexes.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAIwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T06:35:17.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-20T06:35:17.404Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RemindersController.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.API\\Controllers\\RemindersController.cs",
               "RelativeDocumentMoniker": "PayPing.API\\Controllers\\RemindersController.cs",
@@ -191,12 +195,11 @@
               "RelativeToolTip": "PayPing.API\\Controllers\\RemindersController.cs",
               "ViewState": "AgIAAKAAAAAAAAAAAADwv68AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:04:48.28Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:04:48.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Reminder.cs",
               "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Domain\\Entities\\Reminder.cs",
               "RelativeDocumentMoniker": "PayPing.Domain\\Entities\\Reminder.cs",
@@ -204,21 +207,7 @@
               "RelativeToolTip": "PayPing.Domain\\Entities\\Reminder.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAIA0wBAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:06:08.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ReminderBackgroundService.cs",
-              "DocumentMoniker": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
-              "RelativeDocumentMoniker": "PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
-              "ToolTip": "D:\\Dev\\Internship\\Xhire_Tech\\Projects\\PayPing\\backend\\PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
-              "RelativeToolTip": "PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAArwEUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:05:36.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:06:08.79Z"
             },
             {
               "$type": "Document",
@@ -230,8 +219,7 @@
               "RelativeToolTip": "PayPing.Application\\DTOs\\AuthDtos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T09:05:00.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:05:00.145Z"
             },
             {
               "$type": "Document",
@@ -241,8 +229,11 @@
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAANsTAAAAAAAAAAAiwOUTAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-03-18T09:02:08.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T09:02:08.073Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

@@ -14,6 +14,7 @@ namespace PayPing.Application.DTOs
         public DateTime? EndDate { get; set; }
         public string? AvatarUrl { get; set; }
         public bool IsPaid { get; set; }
+        public string? WhatsAppUrl { get; set; }
         public DateTime CreatedAt { get; set; }
         public string UserId { get; set; } = string.Empty;
     }

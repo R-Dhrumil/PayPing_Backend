@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\PayPing.API",
+    "\\PayPing.API\\Properties",
     "\\PayPing.Application",
     "\\PayPing.Application\\DTOs",
     "\\PayPing.Domain",
@@ -10,6 +11,6 @@
     "\\PayPing.Infrastructure\\Persistence",
     "\\PayPing.Infrastructure\\Services"
   ],
-  "SelectedNode": "\\PayPing.API\\Program.cs",
+  "SelectedNode": "\\PayPing.Infrastructure\\Services\\ReminderBackgroundService.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -187,6 +187,27 @@
   },
   {
     "ContainingType": "PayPing.API.Controllers.RemindersController",
+    "Method": "PutReminder",
+    "RelativePath": "api/Reminders/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "PayPing.Application.DTOs.CreateReminderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PayPing.API.Controllers.RemindersController",
     "Method": "DeleteReminder",
     "RelativePath": "api/Reminders/{id}",
     "HttpMethod": "DELETE",

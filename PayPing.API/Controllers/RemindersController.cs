@@ -15,10 +15,12 @@ namespace PayPing.API.Controllers
     public class RemindersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWhatsAppService _whatsAppService;
 
-        public RemindersController(ApplicationDbContext context)
+        public RemindersController(ApplicationDbContext context, IWhatsAppService whatsAppService)
         {
             _context = context;
+            _whatsAppService = whatsAppService;
         }
 
         private string GetCurrentUserId() => User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
@@ -43,6 +45,7 @@ namespace PayPing.API.Controllers
                 EndDate = r.EndDate,
                 AvatarUrl = r.AvatarUrl,
                 IsPaid = r.IsPaid,
+                WhatsAppUrl = _whatsAppService.GenerateWhatsAppLink(r.PhoneNumber, r.Message),
                 CreatedAt = r.CreatedAt,
                 UserId = r.UserId
             }));
@@ -72,6 +75,7 @@ namespace PayPing.API.Controllers
                 EndDate = reminder.EndDate,
                 AvatarUrl = reminder.AvatarUrl,
                 IsPaid = reminder.IsPaid,
+                WhatsAppUrl = _whatsAppService.GenerateWhatsAppLink(reminder.PhoneNumber, reminder.Message),
                 CreatedAt = reminder.CreatedAt,
                 UserId = reminder.UserId
             });
@@ -119,6 +123,7 @@ namespace PayPing.API.Controllers
                     EndDate = reminder.EndDate,
                     AvatarUrl = reminder.AvatarUrl,
                     IsPaid = reminder.IsPaid,
+                    WhatsAppUrl = _whatsAppService.GenerateWhatsAppLink(reminder.PhoneNumber, reminder.Message),
                     CreatedAt = reminder.CreatedAt,
                     UserId = reminder.UserId
                 };
@@ -164,7 +169,17 @@ namespace PayPing.API.Controllers
             
             if (reminder == null) return NotFound();
 
-            reminder.IsPaid = true;
+            // Update behavior for recurring reminders
+            if (reminder.Frequency.Equals("One-time", StringComparison.OrdinalIgnoreCase))
+            {
+                reminder.IsPaid = true;
+            }
+            else
+            {
+                // Advance date and keep IsPaid = false for the next period
+                reminder.NextReminderDate = reminder.CalculateNextDate();
+                reminder.IsPaid = false;
+            }
             
             // Add to history
             var history = new PaymentHistory
@@ -173,14 +188,78 @@ namespace PayPing.API.Controllers
                 ReminderId = reminder.Id,
                 AmountPaid = reminder.Amount,
                 PaymentDate = DateTime.UtcNow,
-                IsPaid = reminder.IsPaid,
-                Notes = "Marked as paid from dashboard"
+                IsPaid = true, // This specific payment was made
+                Notes = reminder.Frequency.Equals("One-time", StringComparison.OrdinalIgnoreCase) 
+                    ? "Marked as paid" 
+                    : $"Paid for period ending {DateTime.UtcNow:d}. Next reminder scheduled for {reminder.NextReminderDate:d}."
             };
             
             _context.PaymentHistories.Add(history);
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutReminder(Guid id, CreateReminderDto updateDto)
+        {
+            var userId = GetCurrentUserId();
+            var reminder = await _context.Reminders
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == userId);
+
+            if (reminder == null)
+            {
+                return NotFound();
+            }
+
+            reminder.Name = updateDto.Name;
+            reminder.Amount = updateDto.Amount;
+            reminder.PhoneNumber = updateDto.PhoneNumber;
+            reminder.Message = updateDto.Message;
+            reminder.Frequency = updateDto.Frequency;
+            reminder.NextReminderDate = updateDto.NextReminderDate;
+            reminder.EndDate = updateDto.EndDate;
+            reminder.AvatarUrl = updateDto.AvatarUrl;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                
+                var responseDto = new ReminderDto
+                {
+                    Id = reminder.Id,
+                    Name = reminder.Name,
+                    Amount = reminder.Amount,
+                    PhoneNumber = reminder.PhoneNumber,
+                    Message = reminder.Message,
+                    Frequency = reminder.Frequency,
+                    NextReminderDate = reminder.NextReminderDate,
+                    EndDate = reminder.EndDate,
+                    AvatarUrl = reminder.AvatarUrl,
+                    IsPaid = reminder.IsPaid,
+                    WhatsAppUrl = _whatsAppService.GenerateWhatsAppLink(reminder.PhoneNumber, reminder.Message),
+                    CreatedAt = reminder.CreatedAt,
+                    UserId = reminder.UserId
+                };
+
+                return Ok(responseDto);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ReminderExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        private bool ReminderExists(Guid id)
+        {
+            return _context.Reminders.Any(e => e.Id == id);
         }
 
         [HttpDelete("{id}")]
